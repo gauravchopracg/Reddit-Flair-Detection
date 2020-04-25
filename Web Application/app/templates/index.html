@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+      <div class="container">
+        <h1>Reddit Flair Detector</h1>
+        <h3>Please enter the url of the reddit post </h3>
+        <form action="{{url_for('success')}}" method="POST">
+          <input title="URL" placeholder="Enter the reddit URL" type="text" name="email_name" required> <br>
+          
+          <button type="submit"> Submit </button>
+        </form>
+      </div>
+{% endblock %}
