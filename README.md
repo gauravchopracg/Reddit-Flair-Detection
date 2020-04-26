@@ -34,7 +34,7 @@ cd Reddit-Flair-Detection/
 pip install -r requirements.txt
 ```
 
-## Reddit Data Collection
+## [Reddit Data Collection](https://colab.research.google.com/drive/1F49m0XPeT1Yudls7Mj1pIRDxe_Ug89AF)
 
 In this part, I have collected two dataset:
 1. 1 year dataset: from 1st January 2019 to 1st January 2020 with features title, flair and body on post using Pushshift's API
@@ -44,7 +44,7 @@ In this part, I have collected two dataset:
 
 For detailed notes please look at [here](https://nbviewer.jupyter.org/github/gauravchopracg/Reddit-Flair-Detection/blob/master/Jupyter%20Notebooks/Part_I_Reddit_Data_Collection.ipynb)
  
-## Exploratoy Data Analysis
+## [Exploratoy Data Analysis](https://colab.research.google.com/drive/19SD52wNoMs9UQc-zMLaPMBcKjeiao0Wk)
 
 In this part, we have try to understand the data, build intuition about the data and find insights in the data. It consist of:
 
@@ -52,17 +52,13 @@ In this part, we have try to understand the data, build intuition about the data
 2. Bivariate Analysis
 3. Feature Engineering
 
-For detailed notes please look at [here](https://nbviewer.jupyter.org/)
-
-## Building a Flair Detector
+## [Building a Flair Detector](https://colab.research.google.com/drive/1eIABpG6qoDbp1HGJQ4JtMqN2RTV3ensU)
 
 This part includes :
 1. Data Preprocessing
 2. Hyperparamter Optimization
 3. Choosing a Validation Strategy
-4. Trying AutoML framework
-
-For detailed notes please look at [here](https://nbviewer.jupyter.org/github/gauravchopracg/Reddit-Flair-Detection/blob/master/Jupyter%20Notebooks/Part_III_Building_a_Flare_Detector.ipynb)
+4. Trying Both machine learning and deep learning  framework
 
 ## Building a Web Application
 
