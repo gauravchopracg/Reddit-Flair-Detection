@@ -10,17 +10,29 @@ This repo illustrates the how to build a machine learning classifier to predit t
 Live web app is here:
 [Website](http://rdflair.herokuapp.com/)
 
+## Requirements
+The following installation has been tested on MacOSX 10.13.6 and Ubuntu 16.04.
 
-## Table of Contents
+This project requires **Python 3** and the following Python libraries installed(plus a few other s depending on task):
 
-1. [Part I - Reddit Data Collection](#reddit-data-collection)
-1. [Part II - Exploratory Data Analysis](#exploratoy-data-analysis)
-1. [Part III - Building a Flair Detector](#building-a-flair-detector)
-1. [Part IV - Building a Web Application](#building-a-web-application)
-1. [Part V - Deployment as a Web Service](#deployment)
-1. [Requirements](#requirements)
-1. [Build on Google Colab](#build-on-google-colab)
-1. [References](#references)
+- [sklearn](http://scikit-learn.com/)
+- [Pytorch](http://pytorch.org/)
+- [pandas](pandas.pydata.org/)
+- [Numpy](http://numpy.org/)
+- [Matplotlib](https://matplotlib.org/) 
+- [Torchtext](https://torchtext.readthedocs.io/en/latest/data.html)
+
+1. Clone the repo
+
+```bash
+git clone https://github.com/gauravchopracg/Reddit-Flair-Detection.git
+cd Reddit-Flair-Detection/
+```
+
+2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
 ## Reddit Data Collection
 
@@ -95,26 +107,3 @@ files = {'upload_file': open('test.txt','rb')}
 r = requests.post("http://rdflair.herokuapp.com/automated_testing", files=files)
 ```
 
-## Requirements
-The following installation has been tested on MacOSX 10.13.6 and Ubuntu 16.04.
-
-This project requires **Python 3** and the following Python libraries installed(plus a few other s depending on task):
-
-- [sklearn](http://scikit-learn.com/)
-- [Pytorch](http://pytorch.org/)
-- [pandas](pandas.pydata.org/)
-- [Numpy](http://numpy.org/)
-- [Matplotlib](https://matplotlib.org/) 
-- [Torchtext](https://torchtext.readthedocs.io/en/latest/data.html)
-
-1. Clone the repo
-
-```bash
-git clone https://github.com/gauravchopracg/Reddit-Flair-Detection.git
-cd Reddit-Flair-Detection/
-```
-
-2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
