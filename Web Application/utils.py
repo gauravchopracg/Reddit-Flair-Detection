@@ -2,25 +2,20 @@ import praw
 import pandas as pd
 import re
 import nltk
-#nltk.download("wordnet", quiet=True)
-#nltk.download("stopwords", quiet=True)
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import pickle
+from RedditAPI import accinfo
 
 # for suppressing any warnings from getting displayed
 import warnings
 warnings.filterwarnings("ignore")
 
+info = accinfo()
+
 def get_posts(urls):
 
-    reddit=praw.Reddit(
-                   client_id='wzbeY1mKdm2ynw',
-                   client_secret='4qoywWZTD13cIUiygWuxA1o6fUs',
-                   user_agent='data_scrape',
-                   username='azf99',
-                   password='Reddit_Scrape'
-                  )
+    reddit = praw.Reddit(client_id=info[0], client_secret=info[1], user_agent=info[2], username=info[3], password=info[4])
 
     topics = {
           "title":[],
@@ -40,15 +35,6 @@ def get_posts(urls):
             flair = post.link_flair_text
         
         comments =  ''
-#        post.comments.replace_more(limit=0)
-        # limiting the total comments to 20
-#        max_comment = 20
-#        i = 0
-#        for comment in post.comments.list():
-#            comments = comment.body + " "
-#            i = i+1
-#            if(i > max_comment):
-#                break
         topics["comments"].append(comments)
     
     # Creating a dataframe for all the values
