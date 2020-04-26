@@ -42,7 +42,7 @@ In this part, I have collected two dataset:
 
 **Two dataset were collected to test different machine learning algorithms and deep learning models**
 
-For detailed notes please look at [here](https://nbviewer.jupyter.org/)
+For detailed notes please look at [here](https://nbviewer.jupyter.org/github/gauravchopracg/Reddit-Flair-Detection/blob/master/Jupyter%20Notebooks/Part_I_Reddit_Data_Collection.ipynb)
  
 ## Exploratoy Data Analysis
 
@@ -62,7 +62,7 @@ This part includes :
 3. Choosing a Validation Strategy
 4. Trying AutoML framework
 
-For detailed notes please look at [here](https://nbviewer.jupyter.org/)
+For detailed notes please look at [here](https://nbviewer.jupyter.org/github/gauravchopracg/Reddit-Flair-Detection/blob/master/Jupyter%20Notebooks/Part_III_Building_a_Flare_Detector.ipynb)
 
 ## Building a Web Application
 
