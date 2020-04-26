@@ -63,7 +63,7 @@ This part includes :
 ### Results-
 
 | Machine Learning Algorithm | Train Accuracy          | Validation Accuracy          | Test Accuracy          |
-| -------------------        |:-----------------------:|
+| -------------------        |:-----------------------:|:-----------------------:|:-----------------------:|
 | Logistic Regression (Title only) | 0.615                  | 0.623                  | 0.402                  |
 | Logistic Regression (Title only + Preprocessing) | 0.546                  | 0.493                  | 0.621                  |
 | BERT (Title + Body + Preprocessing) | 0.546                  | 0.493                  | 0.621                  |
