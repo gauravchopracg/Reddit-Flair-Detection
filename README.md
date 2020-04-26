@@ -40,7 +40,7 @@ In this part, I have collected two dataset:
 1. 1 year dataset: from 1st January 2019 to 1st January 2020 with features title, flair and body on post using Pushshift's API
 2. Balanced dataset: 100 post from 9 flairs using praw module.
 
-**Two dataset were collected to test different machine learning algorithms and deep learning models**
+**Two dataset were collected to test different machine learning algorithms and deep learning models one subset and other yearly data, later they were used as train and test set**
 
 For detailed notes please look at [here](https://nbviewer.jupyter.org/github/gauravchopracg/Reddit-Flair-Detection/blob/master/Jupyter%20Notebooks/Part_I_Reddit_Data_Collection.ipynb)
  
@@ -59,6 +59,15 @@ This part includes :
 2. Hyperparamter Optimization
 3. Choosing a Validation Strategy
 4. Trying Both machine learning and deep learning  framework
+
+### Results-
+
+| Machine Learning Algorithm | Train Accuracy          | Validation Accuracy          | Test Accuracy          |
+| -------------------        |:-----------------------:|
+| Logistic Regression (Title only) | 0.615                  | 0.623                  | 0.402                  |
+| Logistic Regression (Title only + Preprocessing) | 0.546                  | 0.493                  | 0.621                  |
+| BERT (Title + Body + Preprocessing) | 0.546                  | 0.493                  | 0.621                  |
+
 
 ## Building a Web Application
 
