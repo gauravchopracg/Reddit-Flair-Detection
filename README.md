@@ -66,7 +66,7 @@ This part includes :
 | -------------------        |:-----------------------:|:-----------------------:|:-----------------------:|
 | Logistic Regression (Title only) | 0.615                  | 0.623                  | 0.402                  |
 | Logistic Regression (Title only + Preprocessing) | 0.546                  | 0.493                  | 0.621                  |
-| BERT (Title + Body + Preprocessing) | 0.546                  | 0.493                  | 0.621                  |
+| BERT (Title + Body + Preprocessing) | 0.671                  | 0.546                  | 0.651                  |
 
 
 ## Building a Web Application
