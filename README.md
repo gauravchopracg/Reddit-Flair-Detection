@@ -4,11 +4,11 @@ This repo illustrates the how to build a machine learning classifier to predit t
 
 ### Go to [r/india](https://www.reddit.com/r/india/) and open a post
 ![recognized_test1.png](https://github.com/gauravchopracg/Reddit-Flair-Detection/blob/master/Images/test1.png) 
-### Copy its url and paste it into the [app](https://http://rdflair.herokuapp.com/)
+### Copy its url and paste it into the [app](http://rdflair.herokuapp.com/)
 ![recognized_test2.png](https://github.com/gauravchopracg/Reddit-Flair-Detection/blob/master/Images/test2.png)
 
 Live web app is here:
-[Website](https://http://rdflair.herokuapp.com/)
+[Website](http://rdflair.herokuapp.com/)
 
 
 ## Table of Contents
@@ -25,17 +25,20 @@ Live web app is here:
 ## Reddit Data Collection
 
 In this part, I have collected two dataset:
-1. from 1st January 2019 to 1st January 2020 with features title, flair and body on post
-2. Balanced dataset of 1000 submission of each flair.
+1. 1 year dataset: from 1st January 2019 to 1st January 2020 with features title, flair and body on post using Pushshift's API
+2. Balanced dataset: 100 post from 9 flairs using praw module.
+
+**Two dataset were collected to test different machine learning algorithms and deep learning models**
 
 For detailed notes please look at [here](https://nbviewer.jupyter.org/)
  
 ## Exploratoy Data Analysis
 
 In this part, we have try to understand the data, build intuition about the data and find insights in the data. It consist of:
+
 1. Univariate Analysis
 2. Bivariate Analysis
-3. Time-series analysis
+3. Feature Engineering
 
 For detailed notes please look at [here](https://nbviewer.jupyter.org/)
 
@@ -51,16 +54,46 @@ For detailed notes please look at [here](https://nbviewer.jupyter.org/)
 
 ## Building a Web Application
 
-We have created a web application with Python and Flask framework. The project has been developed using the tutorial [Flask Mega-Tutorial for Python 3.6](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+Web application has been developed with Python and Flask framework. The project has been developed using the tutorial [Flask Mega-Tutorial for Python 3.6](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 
-For detailed notes please look at [here](https://nbviewer.jupyter.org/)
+**To run the app in you computer:**
+
+1. Clone the repo
+
+```bash
+$ git clone https://github.com/gauravchopracg/Reddit-Flair-Detection.git
+$ cd Reddit-Flair-Detection/Web Application
+```
+
+2. Install Dependencies
+```bash
+$ pip install -r requirements
+```
+
+3. Import the package
+```bash
+$ export FLASK_APP=rfd.py
+```
+If you are using Microsoft Windows, use set instead of export in the command above
+
+4. Run
+```bash
+$ flask run
+ * Serving Flask app "rfd"
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ ```
 
 ## Deployment
 
+The web application is deployed to Heroku cloud platform. A developer API using flask has been implemented, which returns a JSON containing a python dictionary in which key is URL of post and values are predicted flair. 
 
+Can be accessed by querying: 
+```
+import requests
 
-
-NOTE: In case the installation does work as expected, move to [Build on Google Colab](#build-on-google-colab) to try the project without installing locally. All results can be replicated on google colab easily.
+files = {'upload_file': open('test.txt','rb')}
+r = requests.post("http://rdflair.herokuapp.com/automated_testing", files=files)
+```
 
 ## Requirements
 The following installation has been tested on MacOSX 10.13.6 and Ubuntu 16.04.
@@ -77,14 +110,16 @@ This project requires **Python 3** and the following Python libraries installed(
 1. Clone the repo
 
 ```bash
-git clone https://github.com/akshaybhatia10/Reddit-Flair-Detection/-.git
+git clone https://github.com/gauravchopracg/Reddit-Flair-Detection.git
 cd Reddit-Flair-Detection/
 ```
 
-2. Run
+2. Install Dependencies
 ```bash
 pip install -r requirements
 ```
+## Usage
+to start the web app clone the repo install the 
 
 ## Data Aquisition
 
